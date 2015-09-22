@@ -18,9 +18,12 @@ public class HostInfoTest {
     }
 
     @Test
-    public void testSomeMethod() throws IOException {
+    public void testDetectAddress() throws IOException {
+        System.out.println("testDetectAddress");
+        System.out.println("jvm.version=" + System.getProperty("jvm.version"));
         InetAddress address = new HostInfo().detectAddress();
         System.out.println(address);
+        assertNotNull("address", address);
     }
     
 }
